@@ -18,68 +18,73 @@ h1 {
 
 /* strips */
 .strips {
-  height: 100vh;
   width: 100vw;
-  overflow: hidden;
-  text-align: center;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .strips .strip {
-  position: relative;
   width: 19.9vw;
-  margin: 0.1vw;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  text-align: center;
-  overflow: hidden;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 0.1vw;
+  overflow: hidden;
+  position: relative;
 }
 
 .strips .strip .strip_content {
+  width: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
-  height: 100vh;
-  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
+  position: absolute;
 }
 
-/* before */
-.strips .strip_content:before {
-  content: "";
+.strips .strip .strip_content :before {
+  width: 20vw;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  content: "";
   z-index: 1;
   top: 0;
   left: 0;
-  width: 20vw;
-  height: 100vh;
   background: white;
   opacity: 0.05;
   -webkit-transform-origin: center center;
@@ -89,21 +94,61 @@ h1 {
   -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   overflow: hidden;
+  position: absolute;
 }
 
-.strips .strip_content:hover:before {
+.strips .strip .strip_content :hover:before {
   -webkit-transform: skew(0deg) scaleX(2) translate(0, 0);
   transform: skew(0deg) scaleX(2) translate(0, 0);
   opacity: 0.2;
 }
 
-/* strips 1-5: nth-child 1-5 */
-.strip:nth-child(1) .strip_content {
+.strip:nth-child(1).strip_content {
   background-color: #244F75;
   -webkit-animation-name: strip--u4rx9pe;
           animation-name: strip--u4rx9pe;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.strip:nth-child(2).strip_content {
+  background-color: #60BFBF;
+  -webkit-animation-name: strip--u4rx9pg;
+          animation-name: strip--u4rx9pg;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.strip:nth-child(3).strip_content {
+  background-color: #8C4B7E;
+  -webkit-animation-name: strip--u4rx9q8;
+          animation-name: strip--u4rx9q8;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.strip:nth-child(4).strip_content {
+  background-color: #F8BB44;
+  -webkit-animation-name: strip--u4rx9qn;
+          animation-name: strip--u4rx9qn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+.strip:nth-child(5).strip_content {
+  background-color: #F24B4B;
+  -webkit-animation-name: strip--u4rx9r0;
+          animation-name: strip--u4rx9r0;
+  -webkit-animation-duration: 1.1s;
+          animation-duration: 1.1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
 }
@@ -122,16 +167,6 @@ h1 {
   }
 }
 
-.strip:nth-child(2) .strip_content {
-  background-color: #60BFBF;
-  -webkit-animation-name: strip--u4rx9pg;
-          animation-name: strip--u4rx9pg;
-  -webkit-animation-duration: 0.8s;
-          animation-duration: 0.8s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-
 @-webkit-keyframes strip--u4rx9pg {
   from {
     -webkit-transform: translate3d(0, 100%, 0);
@@ -144,16 +179,6 @@ h1 {
     -webkit-transform: translate3d(0, 100%, 0);
             transform: translate3d(0, 100%, 0);
   }
-}
-
-.strip:nth-child(3) .strip_content {
-  background-color: #8C4B7E;
-  -webkit-animation-name: strip--u4rx9q8;
-          animation-name: strip--u4rx9q8;
-  -webkit-animation-duration: 0.7s;
-          animation-duration: 0.7s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
 }
 
 @-webkit-keyframes strip--u4rx9q8 {
@@ -170,16 +195,6 @@ h1 {
   }
 }
 
-.strip:nth-child(4) .strip_content {
-  background-color: #F8BB44;
-  -webkit-animation-name: strip--u4rx9qn;
-          animation-name: strip--u4rx9qn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-
 @-webkit-keyframes strip--u4rx9qn {
   from {
     -webkit-transform: translate3d(0, 100%, 0);
@@ -192,16 +207,6 @@ h1 {
     -webkit-transform: translate3d(0, 100%, 0);
             transform: translate3d(0, 100%, 0);
   }
-}
-
-.strip:nth-child(5) .strip_content {
-  background-color: #F24B4B;
-  -webkit-animation-name: strip--u4rx9r0;
-          animation-name: strip--u4rx9r0;
-  -webkit-animation-duration: 1.1s;
-          animation-duration: 1.1s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
 }
 
 @-webkit-keyframes strip--u4rx9r0 {

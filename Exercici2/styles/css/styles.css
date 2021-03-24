@@ -103,7 +103,8 @@ h1 {
   opacity: 0.2;
 }
 
-.strip:nth-child(1).strip_content {
+/*test*/
+.strip:nth-child(1) .strip_content {
   background-color: #244F75;
   -webkit-animation-name: strip--u4rx9pe;
           animation-name: strip--u4rx9pe;
@@ -113,7 +114,7 @@ h1 {
           animation-timing-function: ease-out;
 }
 
-.strip:nth-child(2).strip_content {
+.strip:nth-child(2) .strip_content {
   background-color: #60BFBF;
   -webkit-animation-name: strip--u4rx9pg;
           animation-name: strip--u4rx9pg;
@@ -123,7 +124,7 @@ h1 {
           animation-timing-function: ease-out;
 }
 
-.strip:nth-child(3).strip_content {
+.strip:nth-child(3) .strip_content {
   background-color: #8C4B7E;
   -webkit-animation-name: strip--u4rx9q8;
           animation-name: strip--u4rx9q8;
@@ -133,7 +134,7 @@ h1 {
           animation-timing-function: ease-out;
 }
 
-.strip:nth-child(4).strip_content {
+.strip:nth-child(4) .strip_content {
   background-color: #F8BB44;
   -webkit-animation-name: strip--u4rx9qn;
           animation-name: strip--u4rx9qn;
@@ -143,7 +144,7 @@ h1 {
           animation-timing-function: ease-out;
 }
 
-.strip:nth-child(5).strip_content {
+.strip:nth-child(5) .strip_content {
   background-color: #F24B4B;
   -webkit-animation-name: strip--u4rx9r0;
           animation-name: strip--u4rx9r0;

@@ -28,6 +28,7 @@ h1 {
   text-align: center;
 }
 
+//Nesting //Include
 .strips {
   @include str (100vw);
   cursor: pointer;
